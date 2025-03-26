@@ -209,14 +209,17 @@ main {
     border-radius: 0;
 }
 
-
+hr{
+    display: none;
+}
 
 
 /* Responsive */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 0 20px;
+        padding: 10px 20px;
+        margin: 10px 0 0 0;
     }
     .header {
         flex-wrap: wrap;
@@ -229,5 +232,8 @@ main {
     }
     .header .header-link {
         display: none;
+    }
+    hr{
+        display: block;
     }
 }
