@@ -1,4 +1,6 @@
-/* Reset styles */
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +14,9 @@ html, body {
     margin: 0;
 }
 
-/* Body */
+/* ============================================
+   BODY STYLES
+   ============================================ */
 body {
     background-color: #f4f4f4;
     color: #333;
@@ -45,7 +49,9 @@ body {
 }
 */
 
-/* Header */
+/* ============================================
+   HEADER STYLES
+   ============================================ */
 .header {
     position: relative;
     width: 100%;
@@ -53,7 +59,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 35px;
-    padding: 30px 0px 30px 0px;
+    padding: 25px 0px 25px 0px;
     background-color: #ffffff7a;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 20vh;
@@ -76,46 +82,18 @@ body {
     left: 20%;
 } */
 
-
-
-
-/* Logo ở giữa */
+/* Logo Styles */
 .header-logo img {
-    max-height: 40px; /* Giới hạn chiều cao logo */
+    max-height: 40px;
     width: auto;
-    transition: all 0.3s ease-in-out; /* Hiệu ứng mượt mà */
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hiệu ứng hover bổ sung */
 .header-logo img:hover {
     transform: scale(1.15);
 }
-/* Liên kết chung (Home và More) */
-.header-link {
-    color: #0073e6;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-    padding-top: 11px; 
-}
 
-/* Hiệu ứng hover cho cả Home và More */
-.header-link:hover {
-    color: #005bb5; /* Đổi màu chữ khi hover */
-    transform: scale(1.09); /* Phóng to nhẹ */
-}
-
-
-
-
-
-
-
-.header-home {
-    display: none;
-}
-
+/* Header Links */
 .header-link {
     color: #0073e6;
     font-weight: bold;
@@ -130,11 +108,13 @@ body {
     transform: scale(1.09);
 }
 
+.header-home {
+    display: none;
+}
 
-
-
-
-/* Main Content */
+/* ============================================
+   MAIN CONTENT STYLES
+   ============================================ */
 .blog-post-main {
     flex: 1 0 auto;
 }
@@ -147,7 +127,7 @@ body {
     padding: 0 25px;
 }
 
-/* Blog Post */
+/* Blog Post Styles */
 .blog-post {
     flex: 2;
     background: white;
@@ -168,12 +148,15 @@ body {
 /* Blog Header */
 .blog-header {
     margin-bottom: 20px;
+    position: relative;
 }
 
 .blog-header h1 {
     font-size: 36px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 .blog-meta {
@@ -181,6 +164,17 @@ body {
     gap: 15px;
     font-size: 14px;
     color: #777;
+    margin-bottom: 0px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meta-item i {
+    color: #0073e6;
 }
 
 /* Blog Content */
@@ -219,34 +213,93 @@ body {
     color: #777;
     margin-top: 5px;
 }
+.figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
 
-/* Tags */
+/* ============================================
+   IMAGE AND TEXT LAYOUT
+   ============================================ */
+.image-text-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 30px 0;
+}
+
+.image-text-image {
+    flex: 0 0 40%;
+}
+
+.image-text-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-text-content {
+    flex: 1;
+}
+
+.image-text-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   TAGS STYLES
+   ============================================ */
 .blog-tags {
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 19px;
 }
 
 .blog-tags h3 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .blog-tags .tag {
     display: inline-block;
-    background-color: #0073e6;
-    color: white;
-    padding: 5px 10px;
+    background-color: #f0f7ff;
+    color: #0073e6;
+    padding: 6px 12px;
     border-radius: 15px;
     text-decoration: none;
     font-size: 14px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e9f5;
 }
 
 .blog-tags .tag:hover {
-    background-color: #005bb5;
+    background-color: #0073e6;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 115, 230, 0.2);
 }
 
-/* Sidebar */
+.blog-tags-hr {
+    margin: 25px 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+}
+
+/* ============================================
+   SIDEBAR STYLES
+   ============================================ */
 .sidebar {
     flex: 1;
 }
@@ -294,6 +347,7 @@ body {
     color: #005bb5;
 }
 
+/* Social Icons */
 .social-icons a {
     display: inline-block;
     margin: 5px 8px;
@@ -306,7 +360,9 @@ body {
     color: #005bb5;
 }
 
-/* Footer */
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
 .footer {
     background: #333;
     color: white;
@@ -316,44 +372,215 @@ body {
     border-radius: 0;
 }
 
-/* Responsive */
+/* ============================================
+   AUTHOR BIO STYLES
+   ============================================ */
+.author-bio {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 40px 0 0 0;
+}
+
+.author-avatar {
+    flex: 0 0 100px;
+}
+
+.author-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.author-title {
+    color: #0073e6;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.author-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.author-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #005bb5;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
 @media (max-width: 1110px) {
-    .header{
+    .header {
         position: relative; 
         width: 100%;
         background-color: #ffffff7a;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .header-back{
+    .header-back {
         position: absolute;
-        top: 25%;
+        top: 18%;
         left: 27px;
     }
+    
     .header-home {
         display: block;
     }
     
-    .header-logo img{
+    .header-logo img {
         position: absolute;
         top: 50%;
         right: 25px;
         transform: translateY(-50%);
     }
-    .blog-post-main{
+    
+    .blog-post-main {
         width: 100%;
     }
-    .container{
+    
+    .container {
         margin: 30px auto;
         width: 100%;
         flex-direction: column;
         padding: 0 20px;
     }
-    .header-home1{
+    
+    .header-home1 {
         display: none;
     }
-    .header-more{
+    
+    .header-more {
         display: none;
     }
 
+    .blog-post {
+        padding: 15px;
+    }
+
+    .blog-header h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .blog-meta {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .blog-tags h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .blog-tags .tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .blog-tags-hr {
+        margin: 20px 0;
+    }
+
+    .blog-content {
+        font-size: 14px;
+    }
+
+    .blog-content p {
+        margin-bottom: 15px;
+    }
+
+    .blog-content blockquote {
+        font-size: 14px;
+        padding-left: 15px;
+        margin: 15px 0;
+    }
+
+    .inline-image img {
+        max-width: 80%;
+        height: auto;
+        margin: 15px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inline-image figcaption {
+        font-size: 12px;
+    }
+
+    .figcaption {
+        font-size: 12px;
+    }
+
+    /* Image and Text Layout Responsive */
+    .image-text-layout {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .image-text-image {
+        flex: 0 0 100%;
+    }
+    .image-text-image{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-text-content {
+        width: 100%;
+    }
+
+    .image-text-content p {
+        font-size: 14px;
+    }
+
+    /* Author Bio Responsive */
+    .author-bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .author-avatar {
+        flex: 0 0 auto;
+    }
+
+    .author-social {
+        justify-content: center;
+    }
 }

@@ -1,4 +1,6 @@
-/* Reset styles */
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +13,9 @@ html, body {
     margin: 0;
 }
 
-/* Body */
+/* ============================================
+   BODY STYLES
+   ============================================ */
 body {
     background-color: #f4f4f4;
     color: #333;
@@ -21,71 +25,56 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* ============================================
+   HEADER STYLES
+   ============================================ */
 .header {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; /* Căn giữa các phần tử */
-    gap: 50px; /* Khoảng cách giữa các phần tử */
-    padding: 0 20px;
+    justify-content: center;
+    gap: 50px;
+    padding: 24px 20px 24px 50px;
     background-color: #ffffff7a;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 80px; /* Hoặc min-height: 60px */
-    padding: 24px 20px 24px 50px; /* Trên phải dưới trái */
-}
-
-.header {
     height: 20vh;
 }
 
-/* Logo ở giữa */
+/* Logo Styles */
 .header-logo img {
-    max-height: 40px; /* Giới hạn chiều cao logo */
+    max-height: 40px;
     width: auto;
     display: block;
-    transition: all 0.3s ease-in-out; /* Hiệu ứng mượt mà */
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hiệu ứng hover bổ sung */
 .header-logo img:hover {
     transform: scale(1.15);
 }
 
-
-/* Liên kết chung (Home và More) */
+/* Header Links */
 .header-link {
     color: #0073e6;
     font-weight: bold;
     text-decoration: none;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
-    padding-top: 11px; /*Độ lên xuống của Hoe và More Information*/
+    padding-top: 11px;
 }
 
-/* Hiệu ứng hover cho cả Home và More */
 .header-link:hover {
-    color: #005bb5; /* Đổi màu chữ khi hover */
-    transform: scale(1.09); /* Phóng to nhẹ */
+    color: #005bb5;
+    transform: scale(1.09);
 }
 
-/* Tùy chỉnh riêng cho Home (nếu cần) */
-.header-home {
-    /* Có thể thêm kiểu riêng nếu muốn */
-}
-
-/* Tùy chỉnh riêng cho More (nếu cần) */
-.header-more {
-    /* Có thể thêm kiểu riêng nếu muốn */
-}
-
-/* Nội dung chính */
+/* ============================================
+   MAIN CONTENT STYLES
+   ============================================ */
 main {
     flex: 1 0 auto;
 }
 
-/* Container */
 .container {
     display: flex;
     max-width: 1100px;
@@ -104,7 +93,9 @@ main {
     flex: 1;
 }
 
-/* Card Style */
+/* ============================================
+   CARD STYLES
+   ============================================ */
 .card {
     background: white;
     padding: 20px;
@@ -112,7 +103,6 @@ main {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     margin-bottom: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .card:hover {
@@ -155,7 +145,9 @@ main {
     color: #005bb5;
 }
 
-/* Sidebar */
+/* ============================================
+   SIDEBAR STYLES
+   ============================================ */
 .about img {
     width: 100px;
     height: 100px;
@@ -199,7 +191,9 @@ main {
     color: #005bb5;
 }
 
-/* Footer */
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
 .footer {
     background: #333;
     color: white;
@@ -209,31 +203,36 @@ main {
     border-radius: 0;
 }
 
-hr{
+hr {
     display: none;
 }
 
-
-/* Responsive */
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         padding: 10px 20px;
         margin: 10px 0 0 0;
     }
+
     .header {
         flex-wrap: wrap;
         justify-content: center;
         padding: 20px;
         gap: 8px;
     }
+
     .header-logo img {
-        max-height: 40px; /* Giảm nhẹ trên mobile nếu muốn */
+        max-height: 40px;
     }
+
     .header .header-link {
         display: none;
     }
-    hr{
+
+    hr {
         display: block;
     }
 }
